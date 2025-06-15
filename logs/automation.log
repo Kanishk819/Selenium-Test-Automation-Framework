@@ -1,0 +1,6 @@
+2025-06-15 14:41:30 [main] INFO com.ui.listeners.TestListeners Test Suite Started 
+2025-06-15 14:41:31 [main] INFO com.ui.listeners.TestListeners loginExcelTest 
+2025-06-15 14:41:31 [main] INFO com.ui.listeners.TestListeners Verifies if the valid user is able to log into the application 
+2025-06-15 14:41:31 [main] INFO com.ui.listeners.TestListeners [e2e, sanity] 
+2025-06-15 14:41:31 [main] WARN com.ui.listeners.TestListeners loginExcelTest SKIPPED 
+2025-06-15 14:41:31 [main] INFO com.ui.listeners.TestListeners Test Suite Completed 
