@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Automation_Practice_Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Automation_Practice_Test_Suite" title="com.ui.tests.LoginTest" class="method navigator-link" hash-for-method="loginExcelTest(User{emailAddress=&#039;javafo8487@noroasis.com&#039;, password=&#039;password&#039;})">loginExcelTest(User{emailAddress='javafo8487@noroasis.com', password='password'})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Automation_Practice_Test_Suite" title="com.ui.tests.InvalidCredsLoginTest" class="method navigator-link" hash-for-method="invalidLoginTest">invalidLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Automation_Practice_Test_Suite -->
@@ -121,17 +121,16 @@
           <div class="suite-Automation_Practice_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.ui.tests.LoginTest</span>
+              <span class="class-name">com.ui.tests.InvalidCredsLoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginExcelTest(User{emailAddress=&#039;javafo8487@noroasis.com&#039;, password=&#039;password&#039;})">
-                  </a> <!-- loginExcelTest(User{emailAddress='javafo8487@noroasis.com', password='password'}) -->
-                  <span class="method-name">loginExcelTest</span>
-                  <span class="parameters">(User{emailAddress='javafo8487@noroasis.com', password='password'})</span>
+                  <a name="invalidLoginTest">
+                  </a> <!-- invalidLoginTest -->
+                  <span class="method-name">invalidLoginTest</span>
                   <em>
-(Verifies if the valid user is able to log into the application)                  </em>
+(Verifies if proper error messages is shown for user for invalid credentials)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -151,7 +150,7 @@
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;parameter name=&quot;isLambdaTest&quot; value=&quot;true&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.ui.tests.LoginTest&quot;/&gt;
+      &lt;class name=&quot;com.ui.tests.InvalidCredsLoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- UI Automation Test --&gt;
 &lt;/suite&gt; &lt;!-- Automation Practice Test Suite --&gt;
@@ -179,7 +178,7 @@
               <span class="test-group-name">e2e</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">loginExcelTest</span>
+                <span class="method-in-group-name">invalidLoginTest</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -187,7 +186,7 @@
               <span class="test-group-name">sanity</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">loginExcelTest</span>
+                <span class="method-in-group-name">invalidLoginTest</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -209,14 +208,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginExcelTest')
-data.setCell(0, 2, 'com.ui.tests.LoginTest')
-data.setCell(0, 3, 25433);
+data.setCell(0, 1, 'invalidLoginTest')
+data.setCell(0, 2, 'com.ui.tests.InvalidCredsLoginTest')
+data.setCell(0, 3, 3360);
 window.suiteTableData['Automation_Practice_Test_Suite']= { tableData: data, tableDiv: 'times-div-Automation_Practice_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Automation_Practice_Test_Suite">
               </div> <!-- times-div-Automation_Practice_Test_Suite -->
             </div> <!-- times-div -->
@@ -242,18 +241,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.ui.tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.ui.tests.InvalidCredsLoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(chrome, true, true, [TestResult name={null} status=CREATED method=LoginTest.loginExcelTest(com.ui.po...)</span>
+                <span class="method-name">setup(chrome, true, true, [TestResult name={null} status=CREATED method=InvalidCredsLoginTest.invalidLogin...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginExcelTest(User{emailAddress='javafo8487@noroasis.com', password='password'})</span>
-                <span class="method-start">34005 ms</span>
+                <span class="method-name">invalidLoginTest</span>
+                <span class="method-start">13904 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">59458 ms</span>
+                <span class="method-start">17277 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

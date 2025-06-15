@@ -10,7 +10,7 @@
 <!--        <parameter name="isHeadless" value="false"/>-->
 
         <classes>
-            <class name="com.ui.tests.LoginTest"/>
+            <class name="com.ui.tests.InvalidCredsLoginTest"/>
         </classes>
     </test>
 </suite>

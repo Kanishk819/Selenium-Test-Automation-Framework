@@ -2,18 +2,18 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-15T20:48:01 IST" name="Automation Practice Test Suite" finished-at="2025-06-15T20:49:03 IST" duration-ms="62164">
+  <suite started-at="2025-06-15T22:58:11 IST" name="Automation Practice Test Suite" finished-at="2025-06-15T22:58:29 IST" duration-ms="18462">
     <groups>
       <group name="sanity">
-        <method signature="LoginTest.loginExcelTest(com.ui.pojo.User)[pri:0, instance:com.ui.tests.LoginTest@48d61b48]" name="loginExcelTest" class="com.ui.tests.LoginTest"/>
+        <method signature="InvalidCredsLoginTest.invalidLoginTest()[pri:0, instance:com.ui.tests.InvalidCredsLoginTest@69f1a286]" name="invalidLoginTest" class="com.ui.tests.InvalidCredsLoginTest"/>
       </group> <!-- sanity -->
       <group name="e2e">
-        <method signature="LoginTest.loginExcelTest(com.ui.pojo.User)[pri:0, instance:com.ui.tests.LoginTest@48d61b48]" name="loginExcelTest" class="com.ui.tests.LoginTest"/>
+        <method signature="InvalidCredsLoginTest.invalidLoginTest()[pri:0, instance:com.ui.tests.InvalidCredsLoginTest@69f1a286]" name="invalidLoginTest" class="com.ui.tests.InvalidCredsLoginTest"/>
       </group> <!-- e2e -->
     </groups>
-    <test started-at="2025-06-15T20:48:01 IST" name="UI Automation Test" finished-at="2025-06-15T20:49:03 IST" duration-ms="62164">
-      <class name="com.ui.tests.LoginTest">
-        <test-method is-config="true" signature="setup(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.LoginTest@48d61b48]" started-at="2025-06-15T20:48:02 IST" name="setup" description="Load the Homepage of the website" finished-at="2025-06-15T20:48:36 IST" duration-ms="34003" status="PASS">
+    <test started-at="2025-06-15T22:58:11 IST" name="UI Automation Test" finished-at="2025-06-15T22:58:29 IST" duration-ms="18462">
+      <class name="com.ui.tests.InvalidCredsLoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.InvalidCredsLoginTest@69f1a286]" started-at="2025-06-15T22:58:11 IST" name="setup" description="Load the Homepage of the website" finished-at="2025-06-15T22:58:25 IST" duration-ms="13902" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,29 +32,22 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=LoginTest.loginExcelTest(com.ui.pojo.User)[pri:0, instance:com.ui.tests.LoginTest@48d61b48] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=InvalidCredsLoginTest.invalidLoginTest()[pri:0, instance:com.ui.tests.InvalidCredsLoginTest@69f1a286] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginExcelTest(com.ui.pojo.User)[pri:0, instance:com.ui.tests.LoginTest@48d61b48]" started-at="2025-06-15T20:48:36 IST" name="loginExcelTest" description="Verifies if the valid user is able to log into the application" data-provider="LoginTestExcelDataProvider" finished-at="2025-06-15T20:49:02 IST" duration-ms="25433" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[User{emailAddress='javafo8487@noroasis.com', password='password'}]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="invalidLoginTest()[pri:0, instance:com.ui.tests.InvalidCredsLoginTest@69f1a286]" started-at="2025-06-15T22:58:25 IST" name="invalidLoginTest" description="Verifies if proper error messages is shown for user for invalid credentials" finished-at="2025-06-15T22:58:29 IST" duration-ms="3360" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginExcelTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ui.tests.LoginTest@48d61b48]" started-at="2025-06-15T20:49:02 IST" name="teardown" description="Tear down the browser" finished-at="2025-06-15T20:49:03 IST" duration-ms="1193" status="PASS">
+        </test-method> <!-- invalidLoginTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ui.tests.InvalidCredsLoginTest@69f1a286]" started-at="2025-06-15T22:58:29 IST" name="teardown" description="Tear down the browser" finished-at="2025-06-15T22:58:29 IST" duration-ms="744" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.ui.tests.LoginTest -->
+      </class> <!-- com.ui.tests.InvalidCredsLoginTest -->
     </test> <!-- UI Automation Test -->
   </suite> <!-- Automation Practice Test Suite -->
 </testng-results>
