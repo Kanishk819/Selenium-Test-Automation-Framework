@@ -29,6 +29,8 @@ public class LambdaTestUtility {
 //        ltOptions.put("accessKey", System.getenv("LT_LGE7XEkpV7daCuV92L0zNbR8iwUeiPDSv78xzu6lp6f2Rmc"));
         ltOptions.put("user", System.getenv("LT_USERNAME"));
         ltOptions.put("accessKey", System.getenv("LT_ACCESS_KEY"));
+        System.out.println("$$$$$$$$$$$$$$$$$ LT_USERNAME : " +  System.getenv("LT_USERNAME"));
+        System.out.println("$$$$$$$$$$$$$$$$$ LT_ACCESS_KEY : " +  System.getenv("LT_ACCESS_KEY"));
         ltOptions.put("build", "Selenium 4");
         ltOptions.put("name", testName);
         ltOptions.put("platformName", "Windows 10");

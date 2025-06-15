@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-15T20:37:44 IST" name="Automation Practice Test Suite" finished-at="2025-06-15T20:38:27 IST" duration-ms="43049">
+  <suite started-at="2025-06-15T20:48:01 IST" name="Automation Practice Test Suite" finished-at="2025-06-15T20:49:03 IST" duration-ms="62164">
     <groups>
       <group name="sanity">
         <method signature="LoginTest.loginExcelTest(com.ui.pojo.User)[pri:0, instance:com.ui.tests.LoginTest@48d61b48]" name="loginExcelTest" class="com.ui.tests.LoginTest"/>
@@ -11,9 +11,9 @@
         <method signature="LoginTest.loginExcelTest(com.ui.pojo.User)[pri:0, instance:com.ui.tests.LoginTest@48d61b48]" name="loginExcelTest" class="com.ui.tests.LoginTest"/>
       </group> <!-- e2e -->
     </groups>
-    <test started-at="2025-06-15T20:37:44 IST" name="UI Automation Test" finished-at="2025-06-15T20:38:27 IST" duration-ms="43049">
+    <test started-at="2025-06-15T20:48:01 IST" name="UI Automation Test" finished-at="2025-06-15T20:49:03 IST" duration-ms="62164">
       <class name="com.ui.tests.LoginTest">
-        <test-method is-config="true" signature="setup(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.LoginTest@48d61b48]" started-at="2025-06-15T20:37:46 IST" name="setup" description="Load the Homepage of the website" finished-at="2025-06-15T20:38:22 IST" duration-ms="36782" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,boolean,boolean,org.testng.ITestResult)[pri:0, instance:com.ui.tests.LoginTest@48d61b48]" started-at="2025-06-15T20:48:02 IST" name="setup" description="Load the Homepage of the website" finished-at="2025-06-15T20:48:36 IST" duration-ms="34003" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginExcelTest(com.ui.pojo.User)[pri:0, instance:com.ui.tests.LoginTest@48d61b48]" started-at="2025-06-15T20:38:22 IST" name="loginExcelTest" description="Verifies if the valid user is able to log into the application" data-provider="LoginTestExcelDataProvider" finished-at="2025-06-15T20:38:26 IST" duration-ms="3876" status="PASS">
+        <test-method signature="loginExcelTest(com.ui.pojo.User)[pri:0, instance:com.ui.tests.LoginTest@48d61b48]" started-at="2025-06-15T20:48:36 IST" name="loginExcelTest" description="Verifies if the valid user is able to log into the application" data-provider="LoginTestExcelDataProvider" finished-at="2025-06-15T20:49:02 IST" duration-ms="25433" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -50,7 +50,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginExcelTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ui.tests.LoginTest@48d61b48]" started-at="2025-06-15T20:38:26 IST" name="teardown" description="Tear down the browser" finished-at="2025-06-15T20:38:27 IST" duration-ms="895" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ui.tests.LoginTest@48d61b48]" started-at="2025-06-15T20:49:02 IST" name="teardown" description="Tear down the browser" finished-at="2025-06-15T20:49:03 IST" duration-ms="1193" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

@@ -1,18 +1,18 @@
-2025-06-15 20:37:44 [main] INFO com.ui.listeners.TestListeners Test Suite Started 
-2025-06-15 20:38:17 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.HomePage Visiting the Website http://www.automationpractice.pl/index.php? 
-2025-06-15 20:38:22 [TestNG-test-UI Automation Test-1] INFO com.ui.listeners.TestListeners loginExcelTest 
-2025-06-15 20:38:22 [TestNG-test-UI Automation Test-1] INFO com.ui.listeners.TestListeners Verifies if the valid user is able to log into the application 
-2025-06-15 20:38:22 [TestNG-test-UI Automation Test-1] INFO com.ui.listeners.TestListeners [e2e, sanity] 
-2025-06-15 20:38:22 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.HomePage Trying to perform click to go to sign In page 
-2025-06-15 20:38:22 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.HomePage Element found with locatorBy.xpath: //a[contains(text(),'Sign in')] 
-2025-06-15 20:38:23 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.HomePage Element found and now performing click By.xpath: //a[contains(text(),'Sign in')] 
-2025-06-15 20:38:24 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.LoginPage Element found with locatorBy.id: email 
-2025-06-15 20:38:24 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.LoginPage Element found and now Entering text javafo8487@noroasis.com 
-2025-06-15 20:38:24 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.LoginPage Element found with locatorBy.id: passwd 
-2025-06-15 20:38:24 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.LoginPage Element found and now Entering text password 
-2025-06-15 20:38:25 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.LoginPage Element found with locatorBy.id: SubmitLogin 
-2025-06-15 20:38:25 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.LoginPage Element found and now performing click By.id: SubmitLogin 
-2025-06-15 20:38:26 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.MyAccountPage Element found with locatorBy.xpath: //a[@title= 'View my customer account']/span 
-2025-06-15 20:38:26 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.MyAccountPage Element found and now returning the visible text Kanishk Shukla 
-2025-06-15 20:38:26 [TestNG-test-UI Automation Test-1] INFO com.ui.listeners.TestListeners loginExcelTest PASSED 
-2025-06-15 20:38:27 [main] INFO com.ui.listeners.TestListeners Test Suite Completed 
+2025-06-15 20:48:01 [main] INFO com.ui.listeners.TestListeners Test Suite Started 
+2025-06-15 20:48:30 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.HomePage Visiting the Website http://www.automationpractice.pl/index.php? 
+2025-06-15 20:48:36 [TestNG-test-UI Automation Test-1] INFO com.ui.listeners.TestListeners loginExcelTest 
+2025-06-15 20:48:36 [TestNG-test-UI Automation Test-1] INFO com.ui.listeners.TestListeners Verifies if the valid user is able to log into the application 
+2025-06-15 20:48:36 [TestNG-test-UI Automation Test-1] INFO com.ui.listeners.TestListeners [e2e, sanity] 
+2025-06-15 20:48:37 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.HomePage Trying to perform click to go to sign In page 
+2025-06-15 20:48:37 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.HomePage Element found with locatorBy.xpath: //a[contains(text(),'Sign in')] 
+2025-06-15 20:48:41 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.HomePage Element found and now performing click By.xpath: //a[contains(text(),'Sign in')] 
+2025-06-15 20:48:44 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.LoginPage Element found with locatorBy.id: email 
+2025-06-15 20:48:46 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.LoginPage Element found and now Entering text javafo8487@noroasis.com 
+2025-06-15 20:48:56 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.LoginPage Element found with locatorBy.id: passwd 
+2025-06-15 20:48:57 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.LoginPage Element found and now Entering text password 
+2025-06-15 20:48:58 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.LoginPage Element found with locatorBy.id: SubmitLogin 
+2025-06-15 20:48:59 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.LoginPage Element found and now performing click By.id: SubmitLogin 
+2025-06-15 20:49:00 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.MyAccountPage Element found with locatorBy.xpath: //a[@title= 'View my customer account']/span 
+2025-06-15 20:49:01 [TestNG-test-UI Automation Test-1] INFO com.ui.pages.MyAccountPage Element found and now returning the visible text Kanishk Shukla 
+2025-06-15 20:49:02 [TestNG-test-UI Automation Test-1] INFO com.ui.listeners.TestListeners loginExcelTest PASSED 
+2025-06-15 20:49:03 [main] INFO com.ui.listeners.TestListeners Test Suite Completed 

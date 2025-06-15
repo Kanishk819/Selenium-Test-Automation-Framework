@@ -21,6 +21,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      LT_USERNAME: ${{ secrets.LT_USERNAME }}
+      LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 11
