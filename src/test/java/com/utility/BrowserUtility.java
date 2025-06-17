@@ -10,6 +10,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 import java.io.IOException;
@@ -122,6 +123,13 @@ public abstract class BrowserUtility {
         element.click();
     }
 
+    public void clearText(By textBoxLocator){
+        logger.info("Element found with locator" + textBoxLocator);
+        WebElement element = driver.get().findElement(textBoxLocator);
+        logger.info("Element found and clearing the text box field ");
+        element.clear();
+    }
+
     public void enterText(By locator,String text){
         logger.info("Element found with locator" + locator);
         WebElement element = driver.get().findElement(locator);
@@ -160,6 +168,15 @@ public abstract class BrowserUtility {
             visibleTextList.add(getVisibleText(element));
         }
         return visibleTextList;
+    }
+
+    public void selectFromDropDown(By dropDownLocator,String optionToSelect){
+        logger.info("Element found with locator" + dropDownLocator);
+        WebElement element = driver.get().findElement(dropDownLocator);
+        Select select = new Select(element);
+        logger.info("Selecting the option" + optionToSelect);
+        select.selectByVisibleText(optionToSelect);
+
     }
 
 
