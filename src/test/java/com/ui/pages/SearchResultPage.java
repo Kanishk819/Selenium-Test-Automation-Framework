@@ -10,7 +10,6 @@ import java.util.List;
 public class SearchResultPage extends BrowserUtility {
 
     private static final By PRODUCT_LISTING_TITLE_LOCATOR= By.xpath("//span[contains(@class,'lighter')]");
-
     private static final By ALL_PRODUCT_LISTS = By.xpath("//h5[@itemprop = 'name']/a");
 
     public SearchResultPage(WebDriver driver) {
@@ -20,7 +19,6 @@ public class SearchResultPage extends BrowserUtility {
     public String getSearchResultTitle(){
         return getVisibleText(PRODUCT_LISTING_TITLE_LOCATOR);
     }
-
 
     public boolean isSearchTermPresentInProductList(String searchTerm){
         List<String> keywords = Arrays.asList(searchTerm.toLowerCase().split(" "));

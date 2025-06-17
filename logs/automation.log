@@ -1,53 +1,26 @@
-2025-06-15 23:20:57 [main] INFO com.ui.listeners.TestListeners Test Suite Started 
-2025-06-15 23:20:57 [main] INFO com.ui.tests.LoginTest Load the HomePage of the Website 
-2025-06-15 23:20:59 [main] INFO com.ui.pages.HomePage Visiting the Website http://www.automationpractice.pl/index.php? 
-2025-06-15 23:21:24 [main] INFO com.ui.listeners.TestListeners loginCSVTest 
-2025-06-15 23:21:24 [main] INFO com.ui.listeners.TestListeners Verifies if the valid user is able to log into the application 
-2025-06-15 23:21:24 [main] INFO com.ui.listeners.TestListeners [e2e, sanity] 
-2025-06-15 23:21:24 [main] INFO com.ui.pages.HomePage Trying to perform click to go to sign In page 
-2025-06-15 23:21:24 [main] INFO com.ui.pages.HomePage Element found with locatorBy.xpath: //a[contains(text(),'Sign in')] 
-2025-06-15 23:21:24 [main] INFO com.ui.pages.HomePage Element found and now performing click By.xpath: //a[contains(text(),'Sign in')] 
-2025-06-15 23:21:26 [main] INFO com.ui.pages.LoginPage Element found with locatorBy.id: email 
-2025-06-15 23:21:26 [main] INFO com.ui.pages.LoginPage Element found and now Entering text javafo8487@noroasis.com 
-2025-06-15 23:21:27 [main] INFO com.ui.pages.LoginPage Element found with locatorBy.id: passwd 
-2025-06-15 23:21:27 [main] INFO com.ui.pages.LoginPage Element found and now Entering text password 
-2025-06-15 23:21:27 [main] INFO com.ui.pages.LoginPage Element found with locatorBy.id: SubmitLogin 
-2025-06-15 23:21:27 [main] INFO com.ui.pages.LoginPage Element found and now performing click By.id: SubmitLogin 
-2025-06-15 23:21:28 [main] INFO com.ui.pages.MyAccountPage Element found with locatorBy.xpath: //a[@title= 'View my customer account']/span 
-2025-06-15 23:21:28 [main] INFO com.ui.pages.MyAccountPage Element found and now returning the visible text Kanishk Shukla 
-2025-06-15 23:21:28 [main] INFO com.ui.listeners.TestListeners loginCSVTest PASSED 
-2025-06-15 23:21:30 [main] INFO com.ui.tests.LoginTest Load the HomePage of the Website 
-2025-06-15 23:21:31 [main] INFO com.ui.pages.HomePage Visiting the Website http://www.automationpractice.pl/index.php? 
-2025-06-15 23:21:37 [main] INFO com.ui.listeners.TestListeners loginExcelTest 
-2025-06-15 23:21:37 [main] INFO com.ui.listeners.TestListeners Verifies if the valid user is able to log into the application 
-2025-06-15 23:21:37 [main] INFO com.ui.listeners.TestListeners [e2e, sanity] 
-2025-06-15 23:21:37 [main] INFO com.ui.pages.HomePage Trying to perform click to go to sign In page 
-2025-06-15 23:21:37 [main] INFO com.ui.pages.HomePage Element found with locatorBy.xpath: //a[contains(text(),'Sign in')] 
-2025-06-15 23:21:37 [main] INFO com.ui.pages.HomePage Element found and now performing click By.xpath: //a[contains(text(),'Sign in')] 
-2025-06-15 23:21:38 [main] INFO com.ui.pages.LoginPage Element found with locatorBy.id: email 
-2025-06-15 23:21:38 [main] INFO com.ui.pages.LoginPage Element found and now Entering text javafo8487@noroasis.com 
-2025-06-15 23:21:39 [main] INFO com.ui.pages.LoginPage Element found with locatorBy.id: passwd 
-2025-06-15 23:21:39 [main] INFO com.ui.pages.LoginPage Element found and now Entering text password 
-2025-06-15 23:21:39 [main] INFO com.ui.pages.LoginPage Element found with locatorBy.id: SubmitLogin 
-2025-06-15 23:21:39 [main] INFO com.ui.pages.LoginPage Element found and now performing click By.id: SubmitLogin 
-2025-06-15 23:21:40 [main] INFO com.ui.pages.MyAccountPage Element found with locatorBy.xpath: //a[@title= 'View my customer account']/span 
-2025-06-15 23:21:40 [main] INFO com.ui.pages.MyAccountPage Element found and now returning the visible text Kanishk Shukla 
-2025-06-15 23:21:40 [main] INFO com.ui.listeners.TestListeners loginExcelTest PASSED 
-2025-06-15 23:21:40 [main] INFO com.ui.tests.LoginTest Load the HomePage of the Website 
-2025-06-15 23:21:42 [main] INFO com.ui.pages.HomePage Visiting the Website http://www.automationpractice.pl/index.php? 
-2025-06-15 23:21:48 [main] INFO com.ui.listeners.TestListeners loginTest 
-2025-06-15 23:21:48 [main] INFO com.ui.listeners.TestListeners Verifies if the valid user is able to log into the application 
-2025-06-15 23:21:48 [main] INFO com.ui.listeners.TestListeners [e2e, sanity] 
-2025-06-15 23:21:48 [main] INFO com.ui.pages.HomePage Trying to perform click to go to sign In page 
-2025-06-15 23:21:48 [main] INFO com.ui.pages.HomePage Element found with locatorBy.xpath: //a[contains(text(),'Sign in')] 
-2025-06-15 23:21:48 [main] INFO com.ui.pages.HomePage Element found and now performing click By.xpath: //a[contains(text(),'Sign in')] 
-2025-06-15 23:21:49 [main] INFO com.ui.pages.LoginPage Element found with locatorBy.id: email 
-2025-06-15 23:21:49 [main] INFO com.ui.pages.LoginPage Element found and now Entering text javafo8487@noroasis.com 
-2025-06-15 23:21:49 [main] INFO com.ui.pages.LoginPage Element found with locatorBy.id: passwd 
-2025-06-15 23:21:49 [main] INFO com.ui.pages.LoginPage Element found and now Entering text password 
-2025-06-15 23:21:49 [main] INFO com.ui.pages.LoginPage Element found with locatorBy.id: SubmitLogin 
-2025-06-15 23:21:49 [main] INFO com.ui.pages.LoginPage Element found and now performing click By.id: SubmitLogin 
-2025-06-15 23:21:51 [main] INFO com.ui.pages.MyAccountPage Element found with locatorBy.xpath: //a[@title= 'View my customer account']/span 
-2025-06-15 23:21:51 [main] INFO com.ui.pages.MyAccountPage Element found and now returning the visible text Kanishk Shukla 
-2025-06-15 23:21:51 [main] INFO com.ui.listeners.TestListeners loginTest PASSED 
-2025-06-15 23:21:51 [main] INFO com.ui.listeners.TestListeners Test Suite Completed 
+2025-06-16 14:26:29 [main] INFO com.ui.listeners.TestListeners Test Suite Started 
+2025-06-16 14:26:29 [main] INFO com.ui.tests.SearchProductTest Load the HomePage of the Website 
+2025-06-16 14:26:31 [main] INFO com.ui.pages.HomePage Visiting the Website http://www.automationpractice.pl/index.php? 
+2025-06-16 14:26:37 [main] INFO com.ui.pages.HomePage Trying to perform click to go to sign In page 
+2025-06-16 14:26:37 [main] INFO com.ui.pages.HomePage Element found with locatorBy.xpath: //a[contains(text(),'Sign in')] 
+2025-06-16 14:26:37 [main] INFO com.ui.pages.HomePage Element found and now performing click By.xpath: //a[contains(text(),'Sign in')] 
+2025-06-16 14:26:38 [main] INFO com.ui.pages.LoginPage Element found with locatorBy.id: email 
+2025-06-16 14:26:38 [main] INFO com.ui.pages.LoginPage Element found and now Entering text javafo8487@noroasis.com 
+2025-06-16 14:26:38 [main] INFO com.ui.pages.LoginPage Element found with locatorBy.id: passwd 
+2025-06-16 14:26:38 [main] INFO com.ui.pages.LoginPage Element found and now Entering text password 
+2025-06-16 14:26:38 [main] INFO com.ui.pages.LoginPage Element found with locatorBy.id: SubmitLogin 
+2025-06-16 14:26:38 [main] INFO com.ui.pages.LoginPage Element found and now performing click By.id: SubmitLogin 
+2025-06-16 14:26:38 [main] INFO com.ui.listeners.TestListeners verifyProductSearchTest 
+2025-06-16 14:26:38 [main] INFO com.ui.listeners.TestListeners Verify if Logged in User is able to search for a product and correct product search results is displayed 
+2025-06-16 14:26:38 [main] INFO com.ui.listeners.TestListeners [smoke, e2e, sanity] 
+2025-06-16 14:26:38 [main] INFO com.ui.pages.MyAccountPage Element found with locatorBy.id: search_query_top 
+2025-06-16 14:26:40 [main] INFO com.ui.pages.MyAccountPage Element found and now Entering text Printed Summer Dress 
+2025-06-16 14:26:40 [main] INFO com.ui.pages.MyAccountPage Element found with locatorBy.id: search_query_top 
+2025-06-16 14:26:40 [main] INFO com.ui.pages.MyAccountPage Element found and now Enter the special key  
+2025-06-16 14:26:41 [main] INFO com.ui.pages.SearchResultPage Element found with locatorBy.xpath: //h5[@itemprop = 'name']/a 
+2025-06-16 14:26:41 [main] INFO com.ui.pages.SearchResultPage Elements found and now printing the List of Elements 
+2025-06-16 14:26:41 [main] INFO com.ui.pages.SearchResultPage Returning the visible text Printed Summer Dress 
+2025-06-16 14:26:41 [main] INFO com.ui.pages.SearchResultPage Returning the visible text Printed Summer Dress 
+2025-06-16 14:26:41 [main] INFO com.ui.pages.SearchResultPage Returning the visible text Printed Chiffon Dress 
+2025-06-16 14:26:41 [main] INFO com.ui.listeners.TestListeners verifyProductSearchTest PASSED 
+2025-06-16 14:26:42 [main] INFO com.ui.listeners.TestListeners Test Suite Completed 
