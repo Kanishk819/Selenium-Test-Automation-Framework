@@ -123,6 +123,11 @@ public abstract class BrowserUtility {
         element.click();
     }
 
+    public void clickOn(WebElement element){
+        logger.info("Element found and now performing click");
+        element.click();
+    }
+
     public void clearText(By textBoxLocator){
         logger.info("Element found with locator" + textBoxLocator);
         WebElement element = driver.get().findElement(textBoxLocator);
@@ -170,6 +175,14 @@ public abstract class BrowserUtility {
         return visibleTextList;
     }
 
+    public List<WebElement> getAllElements(By locator){
+        logger.info("Element found with locator" + locator);
+        List<WebElement> elementList = driver.get().findElements(locator);
+        logger.info("Elements found and now returning the List of Elements");
+        System.out.println(elementList.size());
+        return elementList;
+    }
+
     public void selectFromDropDown(By dropDownLocator,String optionToSelect){
         logger.info("Element found with locator" + dropDownLocator);
         WebElement element = driver.get().findElement(dropDownLocator);
@@ -178,7 +191,6 @@ public abstract class BrowserUtility {
         select.selectByVisibleText(optionToSelect);
 
     }
-
 
     public String takeScreenShot(String name){
         TakesScreenshot screenshot = (TakesScreenshot) driver.get();

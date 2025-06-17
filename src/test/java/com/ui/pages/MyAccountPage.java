@@ -23,13 +23,11 @@ public final class MyAccountPage extends BrowserUtility {
     public SearchResultPage searchForAProduct(String productName) {
         enterText(SEARCH_TEXT_BOX_LOCATOR, productName);
         enterSpecialKey(SEARCH_TEXT_BOX_LOCATOR, Keys.ENTER);
-        SearchResultPage searchResultPage = new SearchResultPage(getDriver());
-        return searchResultPage;
+        return new SearchResultPage(getDriver());
     }
 
-    public AddressPage goToAddAddressPage(){
+    public AddressPage goToAddAddressPage() {
         clickOn(ADD_NEW_ADDRESS_LINK_LOCATOR);
-
         return new AddressPage(getDriver());
     }
 }
