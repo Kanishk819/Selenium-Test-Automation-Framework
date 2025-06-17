@@ -22,6 +22,7 @@ public class TestListeners implements ITestListener {
     ExtentReports extentReports;
     ExtentTest extentTest;
 
+    @Override
     public void onTestStart(ITestResult result) {
         logger.info(result.getMethod().getMethodName());
         logger.info(result.getMethod().getDescription());
@@ -30,6 +31,7 @@ public class TestListeners implements ITestListener {
     }
     //Called the moment the test gets started
 
+    @Override
     public void onTestSuccess(ITestResult result) {
         logger.info(result.getMethod().getMethodName() + " " + "PASSED");
         ExtentReporterUtility.getTest().log(Status.PASS,result.getMethod().getMethodName() + " " + "PASSED");

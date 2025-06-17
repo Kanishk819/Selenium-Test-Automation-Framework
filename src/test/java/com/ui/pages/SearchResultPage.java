@@ -27,8 +27,7 @@ public class SearchResultPage extends BrowserUtility {
                 .anyMatch(name -> (keywords.stream().anyMatch(name.toLowerCase()::contains)));
     }
 
-    public ProductDetailPage clickOnTheFirstProductAt(int index) {
-        System.out.println(getAllElements(ALL_PRODUCT_LISTS).size());
+    public ProductDetailPage clickOnTheProductAtIndex(int index) {
         clickOn(getAllElements(ALL_PRODUCT_LISTS).get(index));
         return new ProductDetailPage(getDriver());
     }

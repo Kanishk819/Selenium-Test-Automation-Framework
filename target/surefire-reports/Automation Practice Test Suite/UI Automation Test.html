@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>UI Automation Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jun 15 22:58:11 IST 2025</td>
+<td>Started on:</td><td>Tue Jun 17 23:39:37 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>18 seconds (18462 ms)</td>
+<tr><td>Total time:</td><td>105 seconds (105775 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,64 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ui.tests.AddNewFirstAddressTest.addNewAddress()'><b>addNewAddress</b><br>Test class: com.ui.tests.AddNewFirstAddressTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@title = &apos;Add my first address&apos;] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 127.0.2651.74, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54491}, msedge: {msedgedriverVersion: 127.0.2651.74 (dbf5b0aa014c..., userDataDir: C:\Program Files (x86)\scop...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-mumbai.lambdatest..., se:cdpVersion: 127.0.2651.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 739b39e421032f8982ab83e94850da7a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.utility.BrowserUtility.clickOn(BrowserUtility.java:136)
+	at com.ui.pages.MyAccountPage.goToAddAddressPage(MyAccountPage.java:30)
+	at com.ui.tests.AddNewFirstAddressTest.addNewAddress(AddNewFirstAddressTest.java:25)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace592485789", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace592485789'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@title = &apos;Add my first address&apos;] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 127.0.2651.74, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54491}, msedge: {msedgedriverVersion: 127.0.2651.74 (dbf5b0aa014c..., userDataDir: C:\Program Files (x86)\scop...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-mumbai.lambdatest..., se:cdpVersion: 127.0.2651.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 739b39e421032f8982ab83e94850da7a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.utility.BrowserUtility.clickOn(BrowserUtility.java:136)
+	at com.ui.pages.MyAccountPage.goToAddAddressPage(MyAccountPage.java:30)
+	at com.ui.tests.AddNewFirstAddressTest.addNewAddress(AddNewFirstAddressTest.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div></td>
+<td>5</td>
+<td>com.ui.tests.AddNewFirstAddressTest@63f259c3</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +134,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.ui.tests.LoginTest.loginTest()'><b>loginTest</b><br>Test class: com.ui.tests.LoginTest<br>Test method: Verifies if the valid user is able to log into the application<br>Parameters: User{emailAddress='javafo8487@noroasis.com', password='password'}</td>
+<td></td>
+<td>6</td>
+<td>com.ui.tests.LoginTest@291f18</td></tr>
+<tr>
+<td title='com.ui.tests.ProductCheckoutTest.checkoutTest()'><b>checkoutTest</b><br>Test class: com.ui.tests.ProductCheckoutTest<br>Test method: Verify if the logged in User is able to buy a dress</td>
+<td></td>
+<td>20</td>
+<td>com.ui.tests.ProductCheckoutTest@3b7d3a38</td></tr>
+<tr>
 <td title='com.ui.tests.InvalidCredsLoginTest.invalidLoginTest()'><b>invalidLoginTest</b><br>Test class: com.ui.tests.InvalidCredsLoginTest<br>Test method: Verifies if proper error messages is shown for user for invalid credentials</td>
 <td></td>
+<td>5</td>
+<td>com.ui.tests.InvalidCredsLoginTest@5b6ec132</td></tr>
+<tr>
+<td title='com.ui.tests.LoginTest.loginCSVTest()'><b>loginCSVTest</b><br>Test class: com.ui.tests.LoginTest<br>Test method: Verifies if the valid user is able to log into the application<br>Parameters: User{emailAddress='javafo8487@noroasis.com', password='password'}</td>
+<td></td>
+<td>6</td>
+<td>com.ui.tests.LoginTest@291f18</td></tr>
+<tr>
+<td title='com.ui.tests.SearchProductTest.verifyProductSearchTest()'><b>verifyProductSearchTest</b><br>Test class: com.ui.tests.SearchProductTest<br>Test method: Verify if Logged in User is able to search for a product and correct product search results is displayed</td>
+<td></td>
 <td>3</td>
-<td>com.ui.tests.InvalidCredsLoginTest@69f1a286</td></tr>
+<td>com.ui.tests.SearchProductTest@1046d517</td></tr>
+<tr>
+<td title='com.ui.tests.LoginTest.loginExcelTest()'><b>loginExcelTest</b><br>Test class: com.ui.tests.LoginTest<br>Test method: Verifies if the valid user is able to log into the application<br>Parameters: User{emailAddress='javafo8487@noroasis.com', password='password'}</td>
+<td></td>
+<td>6</td>
+<td>com.ui.tests.LoginTest@291f18</td></tr>
 </table><p>
 </body>
 </html>

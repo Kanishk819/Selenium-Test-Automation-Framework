@@ -13,12 +13,12 @@ import static org.testng.Assert.assertEquals;
 public class LoginTest extends TestBase{
     Logger logger = LoggerUtility.getLogger(this.getClass());
 
-    @Test(description = "Verifies if the valid user is able to log into the application",groups = {"e2e","sanity"},dataProviderClass = com.ui.dataproviders.LoginDataProvider.class,dataProvider = "LoginTestDataProvider")
+    @Test(description = "Verifies if the valid user is able to log into the application",groups = {"e2e","sanity"},dataProviderClass = com.ui.dataproviders.LoginDataProvider.class,dataProvider = "LoginTestDataProvider",retryAnalyzer = com.ui.listeners.MyRetryAnalyzer.class)
     public void loginTest(User user) {
         assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(),"Kanishk Shukla");
     }
 
-    @Test(description = "Verifies if the valid user is able to log into the application",groups = {"e2e","sanity"},dataProviderClass = com.ui.dataproviders.LoginDataProvider.class,dataProvider = "LoginTestCSVDataProvider")
+    @Test(description = "Verifies if the valid user is able to log into the application",groups = {"e2e","sanity"},dataProviderClass = com.ui.dataproviders.LoginDataProvider.class,dataProvider = "LoginTestCSVDataProvider",retryAnalyzer = com.ui.listeners.MyRetryAnalyzer.class)
     public void loginCSVTest(User user) {
         assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(),"Kanishk Shukla");
     }

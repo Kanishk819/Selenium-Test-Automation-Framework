@@ -3,6 +3,7 @@ package com.ui.tests;
 import com.ui.pages.SearchResultPage;
 import static com.ui.pages.Size.*;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -18,6 +19,12 @@ public class ProductCheckoutTest extends TestBase{
 
     @Test(description = "Verify if the logged in User is able to buy a dress", groups = {"e2e","smoke","sanity"})
     public void checkoutTest(){
-        searchResultPage.clickOnTheFirstProductAt(0).changeSize(L);
+        String successMessageResult = searchResultPage.clickOnTheProductAtIndex(0)
+                .changeSize(L).addProductToCart()
+                .proceedToCheckout().goToConfirmAddressPage()
+                .goToShipmentPage().goToPaymentsPage().makePaymentByWire();
+
+        Assert.assertEquals(successMessageResult, "Your order on My Shop is complete.", "Success Message Mismatch");
     }
+
 }

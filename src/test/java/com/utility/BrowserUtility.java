@@ -10,11 +10,14 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -22,48 +25,54 @@ import java.util.List;
 public abstract class BrowserUtility {
 
     Logger logger = LoggerUtility.getLogger(this.getClass());
-    private ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+    private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    private WebDriverWait wait;
 
     public WebDriver getDriver() {
         return driver.get();
     }
 
-    public BrowserUtility(WebDriver driver){
+    public BrowserUtility(WebDriver driver) {
         super();
         this.driver.set(driver);//Initialize the Instance Variable Driver
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5L));
     }
 
-    public BrowserUtility(String browserName){
-        if(browserName.equalsIgnoreCase("chrome")){
+    public BrowserUtility(String browserName) {
+        if (browserName.equalsIgnoreCase("chrome")) {
             driver.set(new ChromeDriver());
-        }
-        else  if(browserName.equalsIgnoreCase("edge")){
+            wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
+        } else if (browserName.equalsIgnoreCase("edge")) {
             driver.set(new EdgeDriver());
-        }
-        else {
+            wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
+
+        } else {
             System.err.println("Invalid Browser Name.... Please Select Chrome or Edge Only");
         }
     }
 
-    public BrowserUtility(Browser browserName){
+    public BrowserUtility(Browser browserName) {
         logger.info("Launching Browser for " + browserName);
-        if(browserName == Browser.CHROME){
+        if (browserName == Browser.CHROME) {
             driver.set(new ChromeDriver());
-        }
-        else  if(browserName == Browser.EDGE){
+            wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
+
+        } else if (browserName == Browser.EDGE) {
             driver.set(new EdgeDriver());
-        }
-        else  if(browserName == Browser.FIREFOX){
+            wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
+
+        } else if (browserName == Browser.FIREFOX) {
             driver.set(new FirefoxDriver());
-        }
-        else {
+            wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
+
+        } else {
             System.err.println("Invalid Browser Name.... Please Select Chrome or Edge Only");
         }
     }
 
-    public BrowserUtility(Browser browserName,boolean isHeadless){
-        if(browserName == Browser.CHROME ){
-            if(isHeadless){
+    public BrowserUtility(Browser browserName, boolean isHeadless) {
+        if (browserName == Browser.CHROME) {
+            if (isHeadless) {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--headless=new");//Ensure driver launches in headless mode
                 options.addArguments("--disable-gpu");
@@ -71,13 +80,15 @@ public abstract class BrowserUtility {
                 options.addArguments("--remote-allow-origins=*");
                 options.addArguments("--window-size=1920,1080");
                 driver.set(new ChromeDriver(options));
-            }
-            else {
+                wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
+
+            } else {
                 driver.set(new ChromeDriver());
+                wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
+
             }
-        }
-        else  if(browserName == Browser.EDGE){
-            if(isHeadless){
+        } else if (browserName == Browser.EDGE) {
+            if (isHeadless) {
                 EdgeOptions options = new EdgeOptions();
                 options.addArguments("--headless=new");
                 options.addArguments("--disable-gpu");
@@ -85,64 +96,77 @@ public abstract class BrowserUtility {
                 options.addArguments("--remote-allow-origins=*");
                 options.addArguments("--window-size=1920,1080");
                 driver.set(new EdgeDriver(options));
-            }
-            else {
+                wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
+
+            } else {
                 driver.set(new EdgeDriver());
+                wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
+
             }
-        }
-        else  if(browserName == Browser.FIREFOX){
-            if(isHeadless){
+        } else if (browserName == Browser.FIREFOX) {
+            if (isHeadless) {
                 FirefoxOptions options = new FirefoxOptions();
                 options.addArguments("--headless=old");
                 driver.set(new FirefoxDriver(options));
-            }
-            else {
+                wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
+
+            } else {
                 driver.set(new FirefoxDriver());
+                wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
+
             }
 
-        }
-        else {
+        } else {
             System.err.println("Invalid Browser Name.... Please Select Chrome or Edge Only");
         }
     }
 
-    public void goToWebsite(String url){
+    public void goToWebsite(String url) {
         logger.info("Visiting the Website " + url);
         driver.get().get(url);
     }
 
-    public void maximizeWindow(){
+    public void maximizeWindow() {
         logger.info("Maximizing the Browser Window");
         driver.get().manage().window().maximize();
     }
 
-    public void clickOn(By locator){
+    public void clickOn(By locator) {
         logger.info("Element found with locator" + locator);
-        WebElement element = driver.get().findElement(locator);//Finds The Element
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
         logger.info("Element found and now performing click " + locator);
         element.click();
     }
 
-    public void clickOn(WebElement element){
+    public void clickOnCheckBox(By locator) {
+        logger.info("Element found with locator" + locator);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        logger.info("Element found and now performing click " + locator);
+        element.click();
+    }
+
+    public void clickOn(WebElement element) {
         logger.info("Element found and now performing click");
         element.click();
     }
 
-    public void clearText(By textBoxLocator){
+    public void clearText(By textBoxLocator) {
         logger.info("Element found with locator" + textBoxLocator);
-        WebElement element = driver.get().findElement(textBoxLocator);
+//        WebElement element = driver.get().findElement(textBoxLocator);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(textBoxLocator));
         logger.info("Element found and clearing the text box field ");
         element.clear();
     }
 
-    public void enterText(By locator,String text){
+    public void enterText(By locator, String text) {
         logger.info("Element found with locator" + locator);
-        WebElement element = driver.get().findElement(locator);
+//        WebElement element = driver.get().findElement(locator);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         logger.info("Element found and now Entering text " + text);
         element.sendKeys(text);
     }
 
-    public void enterSpecialKey(By locator, Keys keyToEnter){
+    public void enterSpecialKey(By locator, Keys keyToEnter) {
         logger.info("Element found with locator" + locator);
 
         WebElement element = driver.get().findElement(locator);
@@ -152,38 +176,38 @@ public abstract class BrowserUtility {
     }
 
 
-    public String getVisibleText(By locator){
+    public String getVisibleText(By locator) {
         logger.info("Element found with locator" + locator);
-        WebElement element = driver.get().findElement(locator);
+//        WebElement element = driver.get().findElement(locator);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         logger.info("Element found and now returning the visible text " + element.getText());
         return element.getText();
     }
 
-    public String getVisibleText(WebElement element){
+    public String getVisibleText(WebElement element) {
         logger.info("Returning the visible text " + element.getText());
         return element.getText();
     }
 
-    public List<String> getAllVisibleText(By locator){
+    public List<String> getAllVisibleText(By locator) {
         logger.info("Element found with locator" + locator);
         List<WebElement> elementList = driver.get().findElements(locator);
         logger.info("Elements found and now printing the List of Elements");
         List<String> visibleTextList = new ArrayList<>();
-        for (WebElement element:elementList){
+        for (WebElement element : elementList) {
             visibleTextList.add(getVisibleText(element));
         }
         return visibleTextList;
     }
 
-    public List<WebElement> getAllElements(By locator){
+    public List<WebElement> getAllElements(By locator) {
         logger.info("Element found with locator" + locator);
         List<WebElement> elementList = driver.get().findElements(locator);
         logger.info("Elements found and now returning the List of Elements");
-        System.out.println(elementList.size());
         return elementList;
     }
 
-    public void selectFromDropDown(By dropDownLocator,String optionToSelect){
+    public void selectFromDropDown(By dropDownLocator, String optionToSelect) {
         logger.info("Element found with locator" + dropDownLocator);
         WebElement element = driver.get().findElement(dropDownLocator);
         Select select = new Select(element);
@@ -192,16 +216,16 @@ public abstract class BrowserUtility {
 
     }
 
-    public String takeScreenShot(String name){
+    public String takeScreenShot(String name) {
         TakesScreenshot screenshot = (TakesScreenshot) driver.get();
         File screenshotData = screenshot.getScreenshotAs(OutputType.FILE);
         Date date = new Date();
         SimpleDateFormat format = new SimpleDateFormat("HH-mm-ss");
         String timeStamp = format.format(date);
-        String path =  "./screenshots/" + name + " - " +"timeStamp" +".png";
+        String path = "./screenshots/" + name + " - " + "timeStamp" + ".png";
         File screeshotFile = new File(path);
         try {
-            FileUtils.copyFile(screenshotData,screeshotFile);
+            FileUtils.copyFile(screenshotData, screeshotFile);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -209,7 +233,7 @@ public abstract class BrowserUtility {
         return path;
     }
 
-    public void quitDriver(){
+    public void quitDriver() {
         driver.get().quit();
     }
 

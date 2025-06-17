@@ -22,7 +22,7 @@ public class SearchProductTest extends TestBase {
     @Test(description = "Verify if Logged in User is able to search for a product and correct product search results is displayed", groups = {"e2e", "smoke", "sanity"})
     public void verifyProductSearchTest() {
         boolean actualResult = myAccountPage.searchForAProduct(SEARCH_TERM).isSearchTermPresentInProductList(SEARCH_TERM);
-        Assert.assertEquals(actualResult,true);
+        Assert.assertTrue(actualResult);
 
     }
 }
